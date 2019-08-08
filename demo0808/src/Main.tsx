@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { App } from './App';
+import RouterComponent from './routes/RouterComponent'
 
 export interface IMainProps
 {
@@ -8,18 +9,13 @@ export interface IMainProps
 
 export class Main extends React.Component<IMainProps, {}>
 {
-    constructor(props: IMainProps)
-    {
+    constructor(props: IMainProps){
         super(props);
     }
 
-    public render(): JSX.Element
-    {
+    render(){
         return (
-            <>
-                zzzzz
-                Main app
-            </>
+               <RouterComponent/>       
         );
     }
 }
