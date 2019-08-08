@@ -27,5 +27,10 @@ module.exports = {
         new HtmlWebPackPlugin({
             template: "./src/index.html"
         })
-    ]
+    ],
+    devtool: 'inline-source-map',
+    devServer: {
+        contentBase: './dist',
+        port: 3001
+    }
 };

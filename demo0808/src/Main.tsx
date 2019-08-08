@@ -17,6 +17,7 @@ export class Main extends React.Component<IMainProps, {}>
     {
         return (
             <>
+                zzzzz
                 Main app
             </>
         );
