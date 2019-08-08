@@ -2,7 +2,6 @@ import React, { PureComponent } from 'react';
 import { withStyles, createStyles} from "@material-ui/styles";
 import PayPackageItem from './PayPackageItem';
 
-
 // 依赖于主题的样式
 const styles = createStyles({
   root: {
@@ -14,9 +13,9 @@ const styles = createStyles({
     width: '300px',
   },
   header:{
-    height: '828px',
+    height: '300px',
     width: '100%',
-    backgroundImage: 'url(\'../resource/img/ia_100000002.png\')',
+    background: 'url(\'../images/ia_100000002.png\')',
     backgroundSize: '100% 100%',
   },
   textField: {
@@ -85,6 +84,7 @@ class ShopsView extends PureComponent<any, any> { // 父组件
 
         </div>
         </div>
+        <img src={require('../images/ia_100000002.png')}/>
        
 
       </div>
