@@ -83,10 +83,7 @@ class ShopsView extends PureComponent<any, any> { // 父组件
           </div>
 
         </div>
-        </div>
-        <img src={require('../images/ia_100000002.png')}/>
-       
-
+        </div>       
       </div>
     )
   }

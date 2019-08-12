@@ -69,7 +69,7 @@ li {
 
 .content {
 	/*height: 39.6rem;*/
-	/* background: url(../img/buy/buy_bg.png); */
+	background: url(../img/buy/buy_bg.png);
 	background-size: 100% 100%;
 	margin-top: -1rem;
 	padding-top: 2rem;
@@ -426,7 +426,7 @@ li {
     left: 1.3rem;
     top: 50%;
     margin-top: -.8rem;
-	background:url(../img/activity_coupon_s.png) no-repeat center center;
+	/* background:url(../img/activity_coupon_s.png) no-repeat center center; */
 	background-size: 100%;
 }
 .select-text{
@@ -706,7 +706,7 @@ li {
 	padding: 1.43rem 0;
 }
 .yet_buycontent{
-	/* background-image: url(../img/bg.png); */
+		/* background-image: url(../img/bg.png); */
     background-size: 15%;
     height: auto;
 }

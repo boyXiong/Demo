@@ -28,10 +28,10 @@ export default class ShopBuyView extends PureComponent { // 父组件
       <div className="block explain blocks">
         <div className="explain-title">购买需知</div>
         <div className="explain-text">
-          <p><span className="text-num">01.</span><span style="color: red; font-weight: bold;">【七夕特惠】</span>8月9日前，根据<span style="color: red; font-weight: bold;">后院等级</span>续费低至<span style="color: red; font-weight: bold;">5折</span>；</p>
-          <p><span className="text-num">02.</span>请遵守国家法律规定，二狗AI会自动识别您的群是否为“非法群”(赌博、色情、毒品等)，<span style="color: red; font-weight: bold;">若为“非法群”，二狗则会自动退群，并终止所有服务</span>；</p>
-          <p><span className="text-num">03.</span>每位用户拥有一只超级狗，邀请进群激活后，则不能再换群，<span style="color: red; font-weight: bold;">请谨慎选择要进入的群，防止被踢</span>；</p>
-          <p><span className="text-num">04.</span><span style="color: red; font-weight: bold;">超级狗默认服务一个群</span>，若有多个群需要超级狗服务，对超级狗私聊发送"开群"，购买更多的群服务；</p>
+          <p><span className="text-num">01.</span><span style={{color:'red',  "font-weight": 'bold'}}>【七夕特惠】</span>8月9日前，根据<span style={{color: 'red', 'font-weight': 'bold'}}>后院等级</span>续费低至<span style={{color: 'red', 'font-weight': 'bold'}}>5折</span>；</p>
+          <p><span className="text-num">02.</span>请遵守国家法律规定，二狗AI会自动识别您的群是否为“非法群”(赌博、色情、毒品等)，<span style={{color: 'red', 'font-weight': 'bold'}}>若为“非法群”，二狗则会自动退群，并终止所有服务</span>；</p>
+          <p><span className="text-num">03.</span>每位用户拥有一只超级狗，邀请进群激活后，则不能再换群，<span style={{color: 'red', 'font-weight': 'bold'}}>请谨慎选择要进入的群，防止被踢</span>；</p>
+          <p><span className="text-num">04.</span><span style={{color: 'red', 'font-weight': 'bold'}}>超级狗默认服务一个群</span>，若有多个群需要超级狗服务，对超级狗私聊发送"开群"，购买更多的群服务；</p>
           <p><span className="text-num">05.</span>如需帮助，请 <span className="toCustomerSrv">联系客服</span> 。</p>
         </div>
         <div className="line"></div>
@@ -45,13 +45,13 @@ export default class ShopBuyView extends PureComponent { // 父组件
           </li>
           <li className="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
             <div id="gopng_xh_outer">
-              <div id="gopng_dge" style="background-size:65% !important"></div>
+              <div id="gopng_dge" style={{'background-size': '65% !important'}}></div>
             </div>
             <span>点歌</span>
           </li>
           <li className="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
             <div id="gopng_sp_outer">
-              <div id="gopng_sp" style="background-size: 64% !important;"></div>
+              <div id="gopng_sp" style={{'background-size': '64% !important'}}></div>
             </div>
             <span>免VIP看影视</span>
           </li>
