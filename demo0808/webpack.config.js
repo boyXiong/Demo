@@ -3,7 +3,7 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: {
-        app: ['./src/App.ts'],
+        app: ['./src/app.js'],
         vendor: ['react', 'react-dom']
     },
     output: {
@@ -20,9 +20,7 @@ module.exports = {
                 test: /\.js$/,
                 loader: 'babel-loader',
                 exclude: /node_modules/,
-                query  :{
-                    presets:['react','es2015']
-                }
+                query: {presets: ['es2015', 'react', 'stage-0'], cacheDirectory: true}  // 解析的顺序很重要
             },
             {
                 test: /\.less$/,
@@ -60,8 +58,9 @@ module.exports = {
         })
     ],
     devtool: 'inline-source-map',
-    devServer: {
-        contentBase: './dist',
-        port: 3001
+    devServer: {      //服务器配置
+        host: '0.0.0.0',  //允许局域网外部访问
+        contentBase: './dist',   //告诉服务器从哪里提供内容
+        port: 3000
     }
 };
