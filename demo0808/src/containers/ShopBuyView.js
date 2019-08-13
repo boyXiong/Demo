@@ -3,8 +3,14 @@ import { withStyles, createStyles } from "@material-ui/styles";
 import PayPackageItem from './PayPackageItem';
 import '../css/mui.min.css'
 import '../css/buy.css'
-// import mui from './js/mui.min.js';
-
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import DialogTitle from '@material-ui/core/DialogTitle';
+import Button from '@material-ui/core/Button';
+import {Link} from 'react-router-dom';
+// import mui from './js/mui.min.js'; // 无法使用 mui.js 
 // window.mui = mui // 全局对象使用 mui;
 
 export default class ShopBuyView extends PureComponent { // 父组件
@@ -12,15 +18,38 @@ export default class ShopBuyView extends PureComponent { // 父组件
 
   constructor(props) {
     super(props)
+
+    console.log("props:", this.props);
+    let storage = window.localStorage;
+    storage.home = "home";
+
+    console.log("storage: ", storage);
+    
+    this.state = {
+      open : false
+    }
   }
 
   buyClicked = ()=> {
     console.log("我被点击了");
-    mui.toast('登陆成功',{ duration:'long', type:'div' })
+    this.handleClickOpen();
   }
 
+  handleClickOpen = ()=>{
+    this.setState({
+      open : true,
+    })
+  }
+
+  handleClose =()=>{
+    console.log("handleClose  close");
+    this.setState({
+      open : false,
+    })
+  }
 
   render() {
+    let {open } = this.state;
 
     return (
       <div className="mui-content">
@@ -112,10 +141,33 @@ export default class ShopBuyView extends PureComponent { // 父组件
             <div id="gopng_lj_outer">
               <div id="gopng_lj"></div>
             </div>
-            <span>垃圾分类</span>
+            <span><Link to="/home">垃圾分类</Link></span>
           </li>
         </ul>
       </div>
+
+      <Dialog
+        open={open}
+        onClose={this.handleClose}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
+      >
+        <DialogTitle id="alert-dialog-title">{"Use Google's location service?"}</DialogTitle>
+        <DialogContent>
+          <DialogContentText id="alert-dialog-description">
+            Let Google help apps determine location. This means sending anonymous location data to
+            Google, even when no apps are running.
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={this.handleClose} color="primary">
+            Disagree
+          </Button>
+          <Button onClick={this.handleClose} color="primary" autoFocus>
+            Agree
+          </Button>
+        </DialogActions>
+      </Dialog>
       
     </div>
     );

@@ -61,6 +61,7 @@ module.exports = {
     devServer: {      //服务器配置
         host: '0.0.0.0',  //允许局域网外部访问
         contentBase: './dist',   //告诉服务器从哪里提供内容
-        port: 3000
+        port: 3000,
+        historyApiFallback: true,  // BrowserRouter， 这个配置后 才可以使用  the default browser full page refresh on form submission and link change 改变
     }
 };
