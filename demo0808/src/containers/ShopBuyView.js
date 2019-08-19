@@ -10,8 +10,6 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Button from '@material-ui/core/Button';
 import {Link} from 'react-router-dom';
-// import mui from './js/mui.min.js'; // 无法使用 mui.js 
-// window.mui = mui // 全局对象使用 mui;
 
 export default class ShopBuyView extends PureComponent { // 父组件
 
@@ -24,14 +22,38 @@ export default class ShopBuyView extends PureComponent { // 父组件
     storage.home = "home";
 
     console.log("storage: ", storage);
-    
     this.state = {
-      open : false
+      open : false,
+      result: ''
     }
   }
 
   buyClicked = ()=> {
     console.log("我被点击了");
+
+    let headers = new Headers({
+      'Content-Type': 'application/json'
+    });
+
+    headers.append('Access-Control-Allow-Origin', 'http://localhost:3000');
+    headers.append('Access-Control-Allow-Credentials', 'true');
+
+    fetch('http://127.0.0.1:8080/query',{
+      method: 'GET', // or 'PUT'
+      //body: JSON.stringify(data), // data can be `string` or {object}!
+      headers})
+    .then(res => res.tojson())
+    .then((res)=>{
+      console.log("result:", res);
+      this.setState({
+        result: res
+      })
+    }).catch((err)=>{
+      this.setState({
+        result: "error"
+      })
+    });
+    // console.log(result.json());
     this.handleClickOpen();
   }
 
@@ -49,7 +71,7 @@ export default class ShopBuyView extends PureComponent { // 父组件
   }
 
   render() {
-    let {open } = this.state;
+    let {open, result } = this.state;
 
     return (
       <div className="mui-content">
@@ -144,6 +166,7 @@ export default class ShopBuyView extends PureComponent { // 父组件
             <span><Link to="/home">垃圾分类</Link></span>
           </li>
         </ul>
+        <div>result: {result}</div>
       </div>
 
       <Dialog

@@ -3,7 +3,7 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: {
-        app: ['./src/app.js'],
+        app: ['babel-polyfill', './src/app.js'],
         vendor: ['react', 'react-dom']
     },
     output: {
@@ -20,7 +20,16 @@ module.exports = {
                 test: /\.js$/,
                 loader: 'babel-loader',
                 exclude: /node_modules/,
-                query: {presets: ['es2015', 'react', 'stage-0'], cacheDirectory: true}  // 解析的顺序很重要
+                query: {
+                    presets: ['es2015', 'react', 'stage-0'], 
+                    cacheDirectory: true,
+                    // "plugins": [
+                    //     ["transform-runtime", {
+                    //         "polyfill": false,
+                    //         "regenerator": true
+                    //     }]
+                    // ]
+                }  // 解析的顺序很重要
             },
             {
                 test: /\.less$/,
