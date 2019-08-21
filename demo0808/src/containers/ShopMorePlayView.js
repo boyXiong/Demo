@@ -9,7 +9,11 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Button from '@material-ui/core/Button';
-import { Link } from 'react-router-dom';
+import ScrollArea from 'react-scrollbar';
+import ScrollView from '../component/ScrollView';
+import {Link} from 'react-router-dom';
+
+
 
 export default class ShopMorePlayView extends PureComponent { // 父组件
 
@@ -20,6 +24,17 @@ export default class ShopMorePlayView extends PureComponent { // 父组件
 
 
 
+  // 互动视图产生
+  interactiveView = ()=>{
+
+
+  }
+
+  buyClicked = () =>{
+    
+
+  }
+
   render() {
 
     return (
@@ -29,7 +44,7 @@ export default class ShopMorePlayView extends PureComponent { // 父组件
         </div>
         <div className="mui-content">
           <div className="buy_play_container">
-            <ul className="mui-table-view mui-grid-view mui-grid-9 girdFour" styles={{"padding-bottom": '0px'}}>
+            <ul className="mui-table-view mui-grid-view mui-grid-9 girdFour" style={{"padding-bottom": '0px'}}>
               <div className="classify">热门玩法</div>
               <li className="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
                 <div id="gopng_lt_outer">
@@ -66,7 +81,7 @@ export default class ShopMorePlayView extends PureComponent { // 父组件
                   <li><div><img src="//h5.w2gou.com/h5/img/lifeAssistant/icon/game_bg_03.png" id="gopng_cyjl" align="absmiddle" alt="" /></div></li>
                   <li><div><img src="//h5.w2gou.com/h5/img/lifeAssistant/icon/game_bg_08.png" id="gopng_cdy" align="absmiddle" alt="" /></div></li>
                   <li><div><img src="//h5.w2gou.com/h5/img/lifeAssistant/icon/game_bg_05.png" id="gopng_cmy" align="absmiddle" alt="" /></div></li>
-                  <li><div><img src="//h5.w2gou.com/h5/img/lifeAssistant/icon/game_bg_06.png" id="gopng_ccy" align="absmiddle" styles={{"overflow":'hidden'}} alt="" /></div></li>
+                  <li><div><img src="//h5.w2gou.com/h5/img/lifeAssistant/icon/game_bg_06.png" id="gopng_ccy" align="absmiddle" style={{"overflow":'hidden'}} alt="" /></div></li>
                   <li><div><img src="//h5.w2gou.com/h5/img/lifeAssistant/icon/game_bg_04.png" id="gopng_yfpd" align="absmiddle" alt="" /></div></li>
                 </ul>
               </div>
@@ -178,11 +193,33 @@ export default class ShopMorePlayView extends PureComponent { // 父组件
             </ul>
           </div>
         </div>
-        <div className="footer-tip-wrap">
-          <div className="footer-img">
-            <img src="//h5.w2gou.com/h5/img/lifeAssistant/buy.png" alt="" />
+        <Link to={`/buy`}>
+          <div className="footer-tip-wrap">
+            <div className="footer-img">
+              <img src="//h5.w2gou.com/h5/img/lifeAssistant/buy.png" alt="" />
+            </div>
           </div>
-        </div>
+        </Link>
+
+        {/* <div style={{"widht:" : '100%', 'height': '20px'}} >
+          <ScrollView>
+            <div>hello is me.</div>
+            <div>hello is me.</div>
+            <div>hello is me.</div>
+            <div>hello is me.</div>
+            <div>hello is me.</div>
+            <div>hello is me.</div>
+            <div>hello is me.</div>
+            <div>hello is me.</div>
+            <div>hello is me.</div>
+            <div>hello is me.</div>
+            <div>hello is me.</div>
+            <div>hello is me.</div>
+            <div>hello is me.</div>
+            <div>hello is me.</div>
+          </ScrollView>
+        </div> */}
+
       </div>
     );
   }

@@ -90,6 +90,64 @@ li {
 	font-weight: 600;
 	margin-top: 10rem;
 }
+.buy-package {
+	width: 33.33333%;
+	display: inline-block;
+	height: 100%;
+	border-radius: 25px;
+	border: 1px solid rgb(218, 201, 52);
+
+	font-size: 1.4rem;
+	color: #292928;
+}
+
+.buy-package-selected {
+	width: 33.33333%;
+	display: inline-block;
+	height: 100%;
+	border-radius: 25px;
+	border: 1px solid rgb(218, 201, 52);
+}
+
+.buy-package-item {
+	/* height: 20%; */
+	padding: 5px;
+	text-align: center;
+}
+
+.buy-coin-text {
+	font-size: 1.4rem;
+	color: #292928;
+	font-weight: bold;
+
+}
+
+.buy-new-coin-unit {
+	font-size: 1.4rem;
+	color: #ffb311;
+	font-weight: bold;
+
+}
+
+.buy-new-coin-text {
+	font-size: 2.8rem;
+	color: #ffb311;
+	font-weight: bold;
+
+}
+
+.buy-save-coin {
+	font-size: 1.4rem;
+	color: red;
+	font-weight: bold;
+
+}
+
+/*
+"buy-coin-text">100元</span></div>
+            <div className="buy-package-item"><span className="buy-new-coin-unit">羊</span><span className="buy-new-coin-text">88</span></div>
+						<div className="buy-package-item"><span className="buy-save-coin">省32元</span></div>
+						*/
 
 .change-group {
 	margin-left: .5rem;
