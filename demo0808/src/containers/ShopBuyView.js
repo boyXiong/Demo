@@ -121,7 +121,7 @@ export default class ShopBuyView extends PureComponent { // 父组件
           <p><span className="text-num">05.</span>如需帮助，请 <span className="toCustomerSrv">联系客服</span> 。</p>
         </div>
         <div className="line"></div>
-        <Link to={`/more`}>
+        <Link to={`/dist/more`}>
         <div className="explain-title mui-navigate-right">VIP超级狗特权<span id="linkUrl">更多玩法</span></div>
         </Link>
         <ul className="mui-table-view mui-grid-view mui-grid-9 girdFour clear">
@@ -183,7 +183,7 @@ export default class ShopBuyView extends PureComponent { // 父组件
             <div id="gopng_lj_outer">
               <div id="gopng_lj"></div>
             </div>
-            <span><Link to="/home">垃圾分类</Link></span>
+            <span>垃圾分类</span>
           </li>
         </ul>
         <div>result: {result}</div>

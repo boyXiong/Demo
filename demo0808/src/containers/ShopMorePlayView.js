@@ -193,7 +193,7 @@ export default class ShopMorePlayView extends PureComponent { // 父组件
             </ul>
           </div>
         </div>
-        <Link to={`/buy`}>
+        <Link to={`/dist/buy`}>
           <div className="footer-tip-wrap">
             <div className="footer-img">
               <img src="//h5.w2gou.com/h5/img/lifeAssistant/buy.png" alt="" />
